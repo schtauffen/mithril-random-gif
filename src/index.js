@@ -1,4 +1,3 @@
-import malatium from "malatium"
-import redux from "redux"
+import m from "mithril"
 
-console.log("yahooooo!")
+m.render(document.body, m("p.row", "Loaded!"))

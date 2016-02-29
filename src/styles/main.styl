@@ -1,5 +1,16 @@
 @import "jeet"
+@import "./global"
 @import "./loader"
+
+/* bootstrap-like margin/padding classes */
+types = m margin, p padding
+directions = t top, r right, b bottom, l left
+
+for t in types
+  for d in directions
+    for num in 0 1 2
+      .{t[0]}-{d[0]}-{num}
+        {t[1]}-{d[1]}-{num} u(num) !important
 
 *
   box-sizing border-box
@@ -8,4 +19,9 @@ html
   font-size 62.5%
 
 body
-  background #e4e4e4
+  margin 0 u()
+  font-size 1.5rem /* separate font sizes from u */
+
+.row
+  stack()
+  margin-bottom u(2)
