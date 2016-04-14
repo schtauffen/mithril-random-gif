@@ -1,6 +1,6 @@
-import m from "mithril"
+import m from 'mithril'
 
 const Home = {}
-Home.view = () => m("p", "home")
+Home.view = () => m('p', 'home')
 
 export default Home

@@ -1,10 +1,10 @@
-import m from "mithril"
+import m from 'mithril'
 
-import Nav from "./nav"
+import Nav from './nav'
 
 const NavLayout = {}
 NavLayout.view = (ctrl, props, children) =>
-  m("#app", [
+  m('#app', [
     Nav,
     children
   ])

@@ -1,28 +1,27 @@
 module.exports = {
-  entry: "./src/index.js",
+  entry: './src/index.js',
   output: {
-    filename: "./public/bundle.js"
+    filename: './public/bundle.js'
   },
   module: {
     loaders: [
       {
         test: /\.js$/,
-        loader: "babel-loader",
+        loader: 'babel-loader',
         exclude: /node_modules(?!\/malatium)/,
         query: {
           presets: [
-            "es2015",
+            'es2015'
           ],
           plugins: [
-//            "transform-runtime",
-            "transform-object-rest-spread",
-            "mjsx",
+//            'transform-runtime',
+            'transform-object-rest-spread'
           ]
         }
       }
     ]
   },
   resolve: {
-    extensions: ["", ".js", ".json", "/index.js"]
+    extensions: ['', '.js', '.json', '/index.js']
   }
 }
