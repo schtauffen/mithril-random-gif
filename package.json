@@ -4,7 +4,7 @@
   "description": "webpack/cycle starter",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "eslint . && echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
     "styl": "stylus -u jeet src/styles/main.styl -o public/main.css",
     "min": "uglifyjs public/bundle.js --screw-ie8 -c dead_code -o public/bundle.min.js",
