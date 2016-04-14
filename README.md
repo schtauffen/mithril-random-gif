@@ -1,3 +1,3 @@
 # silverback
 
-A webpack starter for personal use
+A webpack/cycle starter for personal use
