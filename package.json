@@ -7,8 +7,10 @@
     "test": "eslint . && echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
     "styl": "stylus -u jeet src/styles/main.styl -o public/main.css",
-    "min": "uglifyjs public/bundle.js --screw-ie8 -c dead_code -o public/bundle.min.js",
-    "dev": "webpack -w & stylus -u jeet -w src/styles/main.styl -o public/main.css & nodemon server.js && fg"
+    "min": "NODE_ENV=production webpack -p --config webpack.production.config.js",
+    "closure": "webpack -p --config webpack.closure.config.js",
+    "dev": "NODE_ENV=develop webpack -w & stylus -u jeet -w src/styles/main.styl -o public/main.css & nodemon server.js && fg",
+    "start": "NODE_ENV=production nodemon server.js"
   },
   "author": "Zach Dahl <z.schtauffen@gmail.com>",
   "license": "ISC",
@@ -21,6 +23,7 @@
     "babel-loader": "^6.2.4",
     "babel-plugin-transform-object-rest-spread": "^6.3.13",
     "babel-plugin-transform-runtime": "^6.5.2",
+    "babel-polyfill": "^6.7.4",
     "babel-preset-es2015": "^6.3.13",
     "babelify": "^7.2.0",
     "eslint": "^2.7.0",
@@ -28,12 +31,14 @@
     "eslint-plugin-promise": "^1.1.0",
     "eslint-plugin-standard": "^1.3.2",
     "jeet": "^6.1.2",
+    "js-csp": "^0.5.0",
     "nodemon": "^1.9.1",
     "rupture": "^0.6.1",
     "rx": "^4.1.0",
     "stylus": "^0.53.0",
     "uglifyjs": "^2.4.10",
-    "webpack": "^1.12.14"
+    "webpack": "^1.12.14",
+    "webpack-closure-compiler": "^2.0.2"
   },
   "dependencies": {
     "koa": "^1.2.0",
