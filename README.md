@@ -1,3 +1,3 @@
-# silverback
+# rocket
 
-A webpack/cycle starter for personal use
+A webpack/koa starter for personal use
