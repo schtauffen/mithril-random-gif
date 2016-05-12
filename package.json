@@ -9,7 +9,7 @@
     "styl": "stylus -u jeet src/styles/main.styl -o public/main.css",
     "min": "NODE_ENV=production webpack -p --config webpack.production.config.js",
     "dev": "NODE_ENV=develop webpack -w & stylus -u jeet -w src/styles/main.styl -o public/main.css & nodemon server.js && fg",
-    "start": "NODE_ENV=production nodemon server.js"
+    "start": "NODE_ENV=production forever start server.js"
   },
   "author": "Zach Dahl <z.schtauffen@gmail.com>",
   "license": "ISC",
@@ -30,9 +30,10 @@
     "rupture": "^0.6.1",
     "stylus": "^0.53.0",
     "uglifyjs": "^2.4.10",
-    "webpack": "^1.12.14",
+    "webpack": "^1.12.14"
   },
   "dependencies": {
+    "forever": "^0.15.1",
     "koa": "^1.2.0",
     "koa-compress": "^1.0.9",
     "koa-router": "^5.4.0"
