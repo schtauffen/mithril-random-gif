@@ -1,14 +1,13 @@
 {
-  "name": "cycle-tinkering",
+  "name": "rocket",
   "version": "1.0.0",
-  "description": "webpack/cycle starter",
+  "description": "webpack/koa starter",
   "main": "index.js",
   "scripts": {
     "test": "eslint . && echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
     "styl": "stylus -u jeet src/styles/main.styl -o public/main.css",
     "min": "NODE_ENV=production webpack -p --config webpack.production.config.js",
-    "closure": "webpack -p --config webpack.closure.config.js",
     "dev": "NODE_ENV=develop webpack -w & stylus -u jeet -w src/styles/main.styl -o public/main.css & nodemon server.js && fg",
     "start": "NODE_ENV=production nodemon server.js"
   },
@@ -32,16 +31,8 @@
     "stylus": "^0.53.0",
     "uglifyjs": "^2.4.10",
     "webpack": "^1.12.14",
-    "webpack-closure-compiler": "^2.0.2"
   },
   "dependencies": {
-    "rx": "^4.1.0",
-    "ramda": "^0.21.0",
-    "js-csp": "^0.5.0",
-    "@cycle/core": "^6.0.3",
-    "@cycle/dom": "^9.4.0",
-    "@cycle/http": "^8.2.2",
-    "@cycle/isolate": "^1.2.0",
     "koa": "^1.2.0",
     "koa-compress": "^1.0.9",
     "koa-router": "^5.4.0"
