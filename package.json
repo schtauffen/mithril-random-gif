@@ -43,7 +43,7 @@
     "koa-compress": "^1.0.9",
     "koa-router": "^5.4.0",
     "koa-static": "^2.0.0",
-    "malatium": "0.1.0",
+    "malatium": "0.1.2",
     "mithril": "^0.2.5",
     "ramda": "^0.21.0",
     "redux": "^3.5.2",

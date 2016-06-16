@@ -1,6 +1,6 @@
 import m from 'mithril'
 import R from 'ramda'
-import { createStore, applyMiddleware, bindActionCreators } from 'redux'
+import { createStore, applyMiddleware, bindActionCreators, combineReducers } from 'redux'
 import { createAction, handleActions } from 'redux-actions'
 import Provider, { connect } from 'malatium'
 
@@ -22,13 +22,15 @@ const logger = store => next => action => {
 	const oldState = getState()
 	const result = next(action)
 	const newState = getState()
-	console.log(action, newState)
+	console.log(action, oldState, newState)
 	return result
 }
 
+const reducer = combineReducers({ counter })
+
 const store = createStore(
-	counter,
-	counter(undefined, {}),
+	reducer,
+	reducer(undefined, {}),
 	applyMiddleware(logger)
 )
 
@@ -43,6 +45,6 @@ class Counter {
 	}
 }
 const actions = { increment, decrement }
-const component = connect(x => ({ counter: x }), actions)(new Counter)
+const component = connect('counter', actions)(new Counter)
 
-m.mount(document.querySelector('body'), Provider(m, store, component))
+m.mount(document.body, Provider(m, store, component))
