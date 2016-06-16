@@ -5,10 +5,16 @@
   "main": "index.js",
   "scripts": {
     "test": "eslint . && echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
-    "styl": "stylus -u jeet src/styles/main.styl -o public/main.css",
-    "min": "NODE_ENV=production webpack -p --config webpack.production.config.js",
-    "dev": "NODE_ENV=develop webpack -w & stylus -u jeet -w src/styles/main.styl -o public/main.css & nodemon server.js && fg",
+    "build": "npm run build:css && npm run build:js",
+    "build:css": "stylus -u jeet src/styles/main.styl -o public/main.css",
+    "build:js": "set NODEW_ENV=develop && webpack",
+
+    "watch": "parallelshell \"npm run watch:css\" \"npm run watch:js\" \"npm run dev\"",
+    "watch:js": "set NODE_ENV=develop && webpack -w",
+    "watch:css": "stylus -u jeet -w src/styles/main.styl -o public/main.css",
+
+    "min": "set NODE_ENV=production && webpack -p --config webpack.production.config.js",
+    "dev": "nodemon server.js",
     "start": "NODE_ENV=production forever start server.js"
   },
   "author": "Zach Dahl <z.schtauffen@gmail.com>",
@@ -36,6 +42,8 @@
     "forever": "^0.15.1",
     "koa": "^1.2.0",
     "koa-compress": "^1.0.9",
-    "koa-router": "^5.4.0"
+    "koa-router": "^5.4.0",
+    "koa-static": "^2.0.0",
+    "parallelshell": "^2.0.0"
   }
 }
