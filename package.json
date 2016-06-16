@@ -36,6 +36,7 @@
     "rupture": "^0.6.1",
     "stylus": "^0.53.0",
     "uglifyjs": "^2.4.10",
+    "parallelshell": "^2.0.0",
     "webpack": "^1.12.14"
   },
   "dependencies": {
@@ -43,7 +44,6 @@
     "koa": "^1.2.0",
     "koa-compress": "^1.0.9",
     "koa-router": "^5.4.0",
-    "koa-static": "^2.0.0",
-    "parallelshell": "^2.0.0"
+    "koa-static": "^2.0.0"
   }
 }
