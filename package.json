@@ -7,7 +7,7 @@
     "test": "eslint . && echo \"Error: no test specified\" && exit 1",
     "build": "npm run build:css && npm run build:js",
     "build:css": "stylus -u jeet src/styles/main.styl -o public/main.css",
-    "build:js": "set NODEW_ENV=develop && webpack",
+    "build:js": "set NODE_ENV=develop && webpack",
     "watch": "parallelshell \"npm run watch:css\" \"npm run watch:js\" \"npm run dev\"",
     "watch:js": "set NODE_ENV=develop && webpack -w",
     "watch:css": "stylus -u jeet -w src/styles/main.styl -o public/main.css",
@@ -47,6 +47,7 @@
     "mithril": "^0.2.5",
     "ramda": "^0.21.0",
     "redux": "^3.5.2",
-    "redux-actions": "^0.10.0"
+    "redux-actions": "^0.10.0",
+    "redux-saga": "^0.10.5"
   }
 }
