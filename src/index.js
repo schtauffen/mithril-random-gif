@@ -1,7 +1,6 @@
 import m from 'mithril'
-import Provider, { connect } from 'malatium'
 
-import store from './store'
-console.log(123)
+import routes from './routes'
 
-m.mount(document.body, Provider(m, store, { view: () => m('div', 'lol') }))
+m.route.mode = 'pathname'
+m.route(document.body, '/', routes)
