@@ -3,14 +3,12 @@ import { connect } from 'malatium'
 
 import Link from '~/components/link'
 
-class Nav {
-  view (ctrl, { navItems = [] }, children) {
-    return m('div', [
-      m('ul', navItems.map(({ href, text }) => m('li', m(Link, { href }, text)))),
-      children
-    ])
-  }
-}
+const Nav = {}
 
-const selector = ({ navItems }) => ({ navItems })
-export default connect(selector)(new Nav())
+Nav.view = (ctrl, { navItems = [] }, children) =>
+  m('#app', [
+    m('ul', navItems.map(({ href, text }) => m('li', m(Link, { href }, text)))),
+    children,
+  ])
+
+export default connect('navItems')(Nav)
