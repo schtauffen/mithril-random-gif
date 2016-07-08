@@ -1,6 +1,6 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux'
 
-import * as reducers from './reducer'
+import * as reducers from '~/reducers'
 
 const logger = store => next => action => {
   const result = next(action)

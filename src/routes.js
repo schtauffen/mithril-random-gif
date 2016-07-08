@@ -1,8 +1,8 @@
 import m from 'mithril'
-import store from './store'
 import Provider, { flattenRoutes } from 'malatium'
 
-import App from './components/app'
+import store from '~/store'
+import App from '~/components/app'
 
 const routes = {
   '$container': Provider(m, store, App),

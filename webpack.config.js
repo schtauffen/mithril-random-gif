@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = {
   devtool: 'eval',
   entry: [
@@ -25,6 +27,9 @@ module.exports = {
     ],
   },
   resolve: {
+    alias: {
+      '~': path.resolve(__dirname, 'src'),
+    },
     extensions: ['', '.js', '.json', '/index.js'],
   },
 }
