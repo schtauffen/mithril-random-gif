@@ -9,9 +9,11 @@ export const counter = handleActions((function (actions) {
   return actions
 })({}), 0)
 
-export const navItems = handleActions((actions => {
+export const nav = handleActions((actions => {
   return actions
-})({}), [
+})({}), {
+  items: [
     { href: '/', text: 'Home' },
     { href: '/loader', text: 'Loader' },
-])
+  ]
+})
