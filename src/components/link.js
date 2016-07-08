@@ -1,9 +1,8 @@
 import m from 'mithril'
 
-class Link {
-  view (ctrl, props, children) {
-    return m('a', { ...props, config: m.route }, children)
-  }
-}
+const Link = {}
 
-export default new Link()
+Link.view = (ctrl, props, children) =>
+  m('a', { ...props, config: m.route }, children)
+
+export default Link
