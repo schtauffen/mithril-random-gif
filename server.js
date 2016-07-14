@@ -15,7 +15,9 @@ koa.use(function * () {
     <script defer src="/bundle${
       process.env.NODE_ENV === 'production' ? '.min' : ''
     }.js"></script>
-    <div class="loader">Loading...</div>`.replace(/(\n)\s*/g, '$1')
+    <div id="app">
+      <div class="loader">Loading...</div>
+    </div>`.replace(/(\n)\s*/g, '$1')
 })
 
 koa.listen(port)

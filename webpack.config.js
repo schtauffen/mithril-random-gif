@@ -17,10 +17,12 @@ module.exports = {
         query: {
           presets: [
             'es2015',
+            'react',
           ],
           plugins: [
 //            'transform-runtime',
             'transform-object-rest-spread',
+            'transform-class-properties',
           ],
         },
       },
@@ -30,6 +32,6 @@ module.exports = {
     alias: {
       '~': path.resolve(__dirname, 'src'),
     },
-    extensions: ['', '.js', '.json', '/index.js'],
+    extensions: ['', '.js', '/index.js', '.json'],
   },
 }
