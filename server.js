@@ -5,7 +5,7 @@ const serve = require('koa-static')
 const compress = require('koa-compress')
 
 koa.use(compress())
-koa.use(serve('public'))
+koa.use(serve('dist'))
 koa.use(function * () {
   this.body =
    `<!doctype html>

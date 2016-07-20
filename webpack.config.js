@@ -1,4 +1,8 @@
 const path = require('path')
+const webpack = require('webpack')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const jeet = require('jeet')
+const nib = require('nib')
 
 module.exports = {
   devtool: 'eval',
@@ -6,7 +10,9 @@ module.exports = {
     './src/index.js',
   ],
   output: {
-    filename: './public/bundle.js',
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+    libraryTarget: 'umd'
   },
   module: {
     loaders: [
@@ -20,12 +26,15 @@ module.exports = {
             'react',
           ],
           plugins: [
-//            'transform-runtime',
             'transform-object-rest-spread',
             'transform-class-properties',
           ],
         },
       },
+      {
+        test: /\.styl$/,
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]__[hash:base64:5]!stylus-loader'),
+      }
     ],
   },
   resolve: {
@@ -34,4 +43,10 @@ module.exports = {
     },
     extensions: ['', '.js', '/index.js', '.json'],
   },
+  plugins: [
+    new ExtractTextPlugin('main.css', { allChunks: true }),
+  ],
+  stylus: {
+    use: [jeet(), nib()],
+  }
 }
