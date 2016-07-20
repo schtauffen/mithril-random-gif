@@ -1,4 +1,5 @@
-import style from '~/test.styl'
+import '~/main.styl'
+import style from '~/buttons.styl'
 
 const app = document.getElementById('app')
 

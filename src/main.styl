@@ -1,10 +1,4 @@
-$cta-color = #5d7
-
-cta()
-  color $cta-color
-  &:hover
-    color darken($cta-color, 25%)
-    text-decoration underline
+@import '~src/globals'
 
 :global
   html
@@ -19,9 +13,3 @@ cta()
   a
     text-decoration none
     cta()
-
-.link
-  cta()
-  border none
-  background none
-  cursor pointer
