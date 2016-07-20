@@ -1,8 +1,11 @@
 const path = require('path')
 const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+
 const jeet = require('jeet')
+const rupture = require('rupture')
 const nib = require('nib')
+const axis = require('axis')
 
 module.exports = {
   devtool: 'eval',
@@ -47,6 +50,7 @@ module.exports = {
     new ExtractTextPlugin('main.css', { allChunks: true }),
   ],
   stylus: {
-    use: [jeet(), nib()],
+    use: [jeet(), nib(), rupture(), axis()],
+    import: ['~nib/lib/nib/index.styl', '~jeet/stylus/jeet/index.styl'],
   }
 }
