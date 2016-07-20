@@ -1,7 +1,8 @@
-import style from '~/red.styl'
+import style from '~/test.styl'
 
 const app = document.getElementById('app')
 
 app.innerHTML = `
-    <button class="${style.text}">blep</button>
+  <a href="javascript:void(0)">blip</a>  
+  <button class="${style.link}">blop</button>
 `

@@ -11,6 +11,7 @@ koa.use(function * () {
    `<!doctype html>
     <meta charset="utf-8">
     <title>silverback</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Inconsolata:400,400i,700,700i|Lato:400,400i,700,700i" rel="stylesheet">
     <link rel="stylesheet" href="/main.css">
     <script defer src="/bundle${
       process.env.NODE_ENV === 'production' ? '.min' : ''

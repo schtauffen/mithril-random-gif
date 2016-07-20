@@ -1,0 +1,27 @@
+$cta-color = #5d7
+
+cta()
+  color $cta-color
+  &:hover
+    color darken($cta-color, 25%)
+    text-decoration underline
+
+:global
+  html
+    font-family Lato
+    font-size 62.5%
+  button
+    font-size 1.5rem
+    font-family Lato
+  body
+    font-size 1.5rem
+    background #f4f4f4
+  a
+    text-decoration none
+    cta()
+
+.link
+  cta()
+  border none
+  background none
+  cursor pointer
