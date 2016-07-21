@@ -1,5 +1,4 @@
 const path = require('path')
-const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 const jeet = require('jeet')
@@ -15,7 +14,7 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    libraryTarget: 'umd'
+    libraryTarget: 'umd',
   },
   module: {
     loaders: [
@@ -37,7 +36,7 @@ module.exports = {
       {
         test: /\.styl$/,
         loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]__[hash:base64:5]!stylus-loader'),
-      }
+      },
     ],
   },
   resolve: {
@@ -53,5 +52,5 @@ module.exports = {
   stylus: {
     use: [jeet(), nib(), rupture(), axis()],
     import: ['~nib/lib/nib/index.styl', '~jeet/stylus/jeet/index.styl'],
-  }
+  },
 }
