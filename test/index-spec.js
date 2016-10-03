@@ -1,3 +1,5 @@
+// TODO - glob all *.spec files and run
+// from src folder
 const test = require('tape')
 
 // will fail
