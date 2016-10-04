@@ -1,9 +1,16 @@
+import React from 'react'
+import { Provider } from 'react-redux'
+import { render } from 'react-dom'
+
 import '~/main.styl'
-import button from '~/button.styl'
+import createStore from '~/store'
+import App from '~/components/app.component'
 
-const app = document.getElementById('app')
+const store = createStore()
 
-app.innerHTML = `
-  <a href="javascript:void(0)">blip</a>  
-  <button class="${button.link}">blop</button>
-`
+render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('app')
+)
