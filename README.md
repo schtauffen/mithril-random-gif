@@ -1,3 +1,3 @@
-# rocket
+# djinn
 
-A webpack/koa starter for personal use
+A React and friends starter
