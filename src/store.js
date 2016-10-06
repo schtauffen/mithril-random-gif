@@ -6,7 +6,7 @@ import * as epics from '~/epics'
 import * as reducers from '~/reducers'
 
 const epicsList = Object.keys(epics).map(key => epics[key])
-const epicMiddleware = createEpicMiddleware(...epicsList)
+const epicMiddleware = createEpicMiddleware(combineEpics(...epicsList))
 
 export default function store () {
   return createStore(
