@@ -1,4 +1,4 @@
-import Rx from 'rxjs'
+import 'rxjs'
 import { createStore, applyMiddleware, combineReducers } from 'redux'
 import { combineEpics, createEpicMiddleware } from 'redux-observable'
 

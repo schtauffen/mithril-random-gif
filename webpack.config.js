@@ -30,6 +30,7 @@ module.exports = {
           plugins: [
             'transform-object-rest-spread',
             'transform-class-properties',
+            'syntax-trailing-function-commas',
           ],
         },
       },
@@ -51,6 +52,6 @@ module.exports = {
   ],
   stylus: {
     use: [jeet(), nib(), rupture(), axis()],
-    import: ['~nib/lib/nib/index.styl', '~jeet/stylus/jeet/index.styl'],
+    import: ['~nib/lib/nib/index.styl', '~jeet/stylus/jeet/index.styl', '~src/shared/global.styl'],
   },
 }

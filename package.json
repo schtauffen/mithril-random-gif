@@ -11,13 +11,13 @@
     "min": "set NODE_ENV=production && webpack -p --config webpack.production.config.js",
     "dev": "nodemon server.js",
     "start": "NODE_ENV=production forever start server.js",
-    "test": "ava"
+    "test": "eslint . && ava"
   },
   "author": "Zach Dahl <z.schtauffen@gmail.com>",
   "license": "ISC",
   "ava": {
     "files": [
-      "src/**/*.spec.js"
+      "src/**/*-spec.js"
     ]
   },
   "devDependencies": {
@@ -26,6 +26,7 @@
     "babel-cli": "^6.11.4",
     "babel-core": "^6.4.5",
     "babel-loader": "^6.2.4",
+    "babel-plugin-syntax-trailing-function-commas": "^6.13.0",
     "babel-plugin-transform-class-properties": "^6.10.2",
     "babel-plugin-transform-object-rest-spread": "^6.3.13",
     "babel-plugin-transform-runtime": "^6.5.2",
@@ -39,6 +40,7 @@
     "eslint": "^2.7.0",
     "eslint-config-standard": "^5.1.0",
     "eslint-plugin-promise": "^1.1.0",
+    "eslint-plugin-react": "^6.3.0",
     "eslint-plugin-standard": "^1.3.2",
     "extract-text-webpack-plugin": "^1.0.1",
     "isparta": "^4.0.0",

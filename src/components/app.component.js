@@ -1,8 +1,13 @@
 import React from 'react'
-import { render } from 'react-dom'
 import { connect } from 'react-redux'
 
 import { ping } from '~/actions'
+import button from '~/shared/button.styl'
+
+App.propTypes = {
+  onClick: React.PropTypes.func,
+  isPinging: React.PropTypes.bool,
+}
 
 export default connect(
   mapStateToProps,
@@ -13,7 +18,7 @@ function App ({ onClick, isPinging }) {
   return (
     <div>
       <p>{isPinging.toString()}</p>
-      <button onClick={onClick}>Ping!</button>
+      <button className={button.link} onClick={onClick}>Ping!</button>
     </div>
   )
 }
@@ -24,6 +29,6 @@ function mapStateToProps ({ isPinging }) {
 
 function mapDispatchToProps (dispatch) {
   return {
-    onClick: () => dispatch(ping())
+    onClick: () => dispatch(ping()),
   }
 }

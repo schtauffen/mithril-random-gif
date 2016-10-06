@@ -6,10 +6,8 @@ import '~/main.styl'
 import createStore from '~/store'
 import App from '~/components/app.component'
 
-const store = createStore()
-
 render(
-  <Provider store={store}>
+  <Provider store={createStore()}>
     <App />
   </Provider>,
   document.getElementById('app')
