@@ -18,7 +18,11 @@
   "ava": {
     "files": [
       "src/**/*-spec.js"
-    ]
+    ],
+    "require": [
+      "babel-core/register"
+    ],
+    "babel": "inherit"
   },
   "devDependencies": {
     "ava": "^0.16.0",
