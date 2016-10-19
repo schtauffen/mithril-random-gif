@@ -4,6 +4,7 @@ import f from 'flyd'
 
 import { component } from 'utils'
 
+// TODO - see about a new "component" workhorse for mithril 1.0.0
 let Example = ({ initialCount = 0 } = {}) => {
   const container = f.stream()
   const count = f.stream(initialCount)
