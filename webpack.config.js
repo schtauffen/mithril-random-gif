@@ -31,6 +31,7 @@ module.exports = {
             'transform-object-rest-spread',
             'transform-class-properties',
             'syntax-trailing-function-commas',
+            'transform-function-bind',
           ],
         },
       },
