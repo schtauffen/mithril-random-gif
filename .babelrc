@@ -1,12 +1,14 @@
 {
   "presets": [
     "es2015",
-    "react"
   ],
   "plugins": [
     "transform-object-rest-spread",
     "transform-class-properties",
     "syntax-trailing-function-commas",
     "transform-function-bind",
-  ]
+    ["module-resolver", {
+      "root": ["./src"],
+    }],
+  ],
 }

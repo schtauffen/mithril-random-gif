@@ -7,8 +7,9 @@ const nib = require('nib')
 const axis = require('axis')
 
 module.exports = {
-  devtool: 'eval',
+  devtool: 'source-map', //eval',
   entry: [
+    'whatwg-fetch',
     './src/index.js',
   ],
   output: {
@@ -22,18 +23,6 @@ module.exports = {
         test: /\.js$/,
         loader: 'babel-loader',
         exclude: /node_modules(?!\/malatium)/,
-        query: {
-          presets: [
-            'es2015',
-            'react',
-          ],
-          plugins: [
-            'transform-object-rest-spread',
-            'transform-class-properties',
-            'syntax-trailing-function-commas',
-            'transform-function-bind',
-          ],
-        },
       },
       {
         test: /\.styl$/,
@@ -42,17 +31,17 @@ module.exports = {
     ],
   },
   resolve: {
-    alias: {
-      '~': path.resolve(__dirname, 'src'),
-      'src': path.resolve(__dirname, 'src'),
-    },
     extensions: ['', '.js', '/index.js', '.json'],
   },
   plugins: [
     new ExtractTextPlugin('main.css', { allChunks: true }),
   ],
-  stylus: {
-    use: [jeet(), nib(), rupture(), axis()],
-    import: ['~nib/lib/nib/index.styl', '~jeet/stylus/jeet/index.styl', '~src/shared/global.styl'],
-  },
+  //  stylus: {
+  //    use: [jeet(), nib(), rupture(), axis()],
+  //    import: [
+  //      'nib/lib/nib/index.styl',
+  //      'jeet/stylus/jeet/index.styl',
+  //      'src/shared/global.styl',
+  //    ],
+  //  },
 }
