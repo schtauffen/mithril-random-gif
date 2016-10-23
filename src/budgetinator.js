@@ -140,14 +140,3 @@ function App ({ onClick, transactions }) {
     </div>
   )
 }
-
-function mapStateToProps ({ transactions }) {
-  return { transactions }
-}
-
-function mapDispatchToProps (dispatch) {
-  return {
-    onClick: (transaction) => dispatch(addTransaction(transaction))
-  }
-}
-

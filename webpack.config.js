@@ -36,12 +36,12 @@ module.exports = {
   plugins: [
     new ExtractTextPlugin('main.css', { allChunks: true }),
   ],
-  //  stylus: {
-  //    use: [jeet(), nib(), rupture(), axis()],
-  //    import: [
-  //      'nib/lib/nib/index.styl',
-  //      'jeet/stylus/jeet/index.styl',
-  //      'src/shared/global.styl',
-  //    ],
-  //  },
+  stylus: {
+    use: [jeet(), nib(), rupture(), axis()],
+    //    import: [
+    //      'nib/lib/nib/index.styl',
+    //      'jeet/stylus/jeet/index.styl',
+    //      'src/shared/global.styl',
+    //    ],
+  },
 }
