@@ -44,4 +44,8 @@ module.exports = {
     //      'src/shared/global.styl',
     //    ],
   },
+  //  externals: {
+  //    ramda: 'ramda',
+  //    sanctuary: 'sanctuary',
+  //  }
 }

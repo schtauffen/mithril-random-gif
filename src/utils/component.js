@@ -1,12 +1,6 @@
-export const component = (hooks = {}) => f => Object.assign(Object.create(hooks), {
+export const component = f => ({
   oninit (vnode) {
-    const { attrs, children } = vnode
-
-    if (hooks.oninit) {
-      hooks.oninit(vnode)
-    }
-
-    vnode.state.view = f({ ...attrs, children, vnode })
+    vnode.state.view = f(vnode)
   },
 
   view (vnode) {
