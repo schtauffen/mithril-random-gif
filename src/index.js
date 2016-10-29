@@ -1,5 +1,6 @@
 import m from 'mithril'
 
-import Root from 'components/root'
+import Routes from 'components/routes'
 
-m.mount(document.getElementById('app'), Root)
+m.route.prefix('')
+m.route(document.getElementById('app'), '/', Routes)

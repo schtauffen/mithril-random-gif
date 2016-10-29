@@ -4,6 +4,6 @@ export const component = f => ({
   },
 
   view (vnode) {
-    return vnode.state.view()
+    return vnode.state.view(vnode)
   },
 })

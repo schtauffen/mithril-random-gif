@@ -16,3 +16,5 @@ export const addTodo = createAction('ADD_TODO', text => ({
 export const toggleTodo = createAction('TOGGLE_TODO')
 
 export const removeTodo = createAction('REMOVE_TODO')
+
+export const receiveTodos = createAction('RECEIVE_TODOS')

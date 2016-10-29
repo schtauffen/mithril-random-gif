@@ -28,6 +28,10 @@ module.exports = {
         test: /\.styl$/,
         loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]__[hash:base64:5]!stylus-loader'),
       },
+      {
+        test: /\.css$/,
+        loader: 'style-loader!css-loader',
+      },
     ],
   },
   resolve: {
@@ -44,8 +48,4 @@ module.exports = {
     //      'src/shared/global.styl',
     //    ],
   },
-  //  externals: {
-  //    ramda: 'ramda',
-  //    sanctuary: 'sanctuary',
-  //  }
 }
