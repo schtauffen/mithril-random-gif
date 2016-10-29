@@ -35,8 +35,7 @@ const filterHash = {
 export const fetchTodos = (
   filter
 ) =>
-  delay(1000)
-    .map(() => {
+  delay(1000)["fantasy-land/map"](() => {
       const fn = filterHash[filter]
       if (typeof fn !== 'function')
         throw new Error(`Unkown filter: ${filter}`)

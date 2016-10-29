@@ -24,7 +24,7 @@ const TodoApp = {
     this.filter(filter)
 
     fetchTodos(filter)
-      .map(J.actions.receiveTodos)
+      ['fantasy-land/map'](J.actions.receiveTodos)
       .catch(console::console.error)
   },
 
