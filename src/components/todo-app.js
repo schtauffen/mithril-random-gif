@@ -29,7 +29,6 @@ const TodoApp = {
   },
 
   view ({ attrs }) {
-    console.log('render')
     return m('div', [
       m(Link, { href: '/' }, 'Home'),
       m(Link, { href: '/foo' }, 'Bar'),

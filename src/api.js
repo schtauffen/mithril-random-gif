@@ -1,6 +1,5 @@
 import m from 'mithril'
 import { uuid } from 'utils'
-console.log(m)
 
 const fakeDatabase = {
   todos: [

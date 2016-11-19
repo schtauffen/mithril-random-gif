@@ -8,9 +8,10 @@
     "build:js": "set NODE_ENV=develop && webpack",
     "watch": "parallelshell \"npm run dev\" \"npm run watch:js\"",
     "watch:js": "webpack -w",
-    "min": "set NODE_ENV=production && webpack -p --config webpack.production.config.js",
+    "min": "set NODE_ENV=production&&webpack -p --config webpack.production.config.js",
     "dev": "nodemon server.js",
-    "start": "NODE_ENV=production forever start server.js",
+    "start": "set NODE_ENV=production&&forever start server.js",
+    "stop": "forever stop server.js",
     "test": "eslint . && ava"
   },
   "author": "Zach Dahl <z.schtauffen@gmail.com>",
@@ -68,8 +69,7 @@
     "koa-compress": "^1.0.9",
     "koa-router": "^5.4.0",
     "koa-static": "^2.0.0",
-    "mithril": "github:lhorie/mithril.js#rewrite",
-    "node-uuid": "^1.4.7",
+    "mithril": "^1.0.0-rc.5",
     "sanctuary": "^0.11.1"
   }
 }
