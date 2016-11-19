@@ -1,7 +1,7 @@
 {
-  "name": "malatium",
-  "version": "0.0.1",
-  "description": "flyd and mithril starter",
+  "name": "quicksilver",
+  "version": "1.0.0",
+  "description": "yet another starter",
   "main": "index.js",
   "scripts": {
     "build": "npm run build:js",
