@@ -1,3 +1,3 @@
-# djinn
+# quicksilver
 
-A React and friends starter
+a mithril starter
