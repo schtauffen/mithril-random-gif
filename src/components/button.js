@@ -16,7 +16,7 @@ const Button = ({ attrs }) => {
     .map(update)
 
   const classes = active.map(a => classNames({
-    [styles.button]: !a,
+    [styles.button]: true,
     [styles.button_active]: a,
   }))
 

@@ -2,14 +2,10 @@ const path = require('path')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 const jeet = require('jeet')
-const rupture = require('rupture')
-const nib = require('nib')
-const axis = require('axis')
 
 module.exports = {
   devtool: 'source-map', //eval',
   entry: [
-    'whatwg-fetch',
     './src/index.js',
   ],
   output: {
@@ -22,7 +18,7 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        exclude: /node_modules(?!\/malatium)/,
+        exclude: /node_modules/,
       },
       {
         test: /\.styl$/,
@@ -41,11 +37,6 @@ module.exports = {
     new ExtractTextPlugin('main.css', { allChunks: true }),
   ],
   stylus: {
-    use: [jeet(), nib(), rupture(), axis()],
-    //    import: [
-    //      'nib/lib/nib/index.styl',
-    //      'jeet/stylus/jeet/index.styl',
-    //      'src/shared/global.styl',
-    //    ],
+    use: [jeet()],
   },
 }

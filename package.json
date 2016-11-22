@@ -1,36 +1,19 @@
 {
-  "name": "quicksilver",
+  "name": "mithril-random-gif",
   "version": "1.0.0",
-  "description": "yet another starter",
+  "description": "the random gif example in mithril",
   "main": "index.js",
   "scripts": {
     "build": "npm run build:js",
     "build:js": "set NODE_ENV=develop && webpack",
     "watch": "parallelshell \"npm run dev\" \"npm run watch:js\"",
     "watch:js": "webpack -w",
-    "min": "set NODE_ENV=production&&webpack -p --config webpack.production.config.js",
     "dev": "nodemon server.js",
-    "start": "set NODE_ENV=production&&forever start server.js",
-    "stop": "forever stop server.js",
-    "test": "eslint . && ava"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Zach Dahl <z.schtauffen@gmail.com>",
   "license": "ISC",
-  "ava": {
-    "files": [
-      "src/**/*-spec.js"
-    ],
-    "failFast": true,
-    "verbose": true,
-    "require": [
-      "babel-core/register"
-    ],
-    "babel": "inherit"
-  },
   "devDependencies": {
-    "app-state-inspector": "^0.1.1",
-    "ava": "^0.16.0",
-    "axis": "^0.6.1",
     "babel-cli": "^6.11.4",
     "babel-core": "^6.17.0",
     "babel-loader": "^6.2.4",
@@ -50,26 +33,19 @@
     "eslint-plugin-standard": "^2.0.1",
     "extract-text-webpack-plugin": "^1.0.1",
     "jeet": "^6.1.5",
-    "nib": "^1.1.0",
     "nodemon": "^1.9.1",
     "parallelshell": "^2.0.0",
-    "rupture": "^0.6.1",
     "style-loader": "^0.13.1",
     "stylus": "^0.54.5",
     "stylus-loader": "^2.1.1",
-    "uglifyjs": "^2.4.10",
-    "webpack": "^1.12.14",
-    "whatwg-fetch": "^1.0.0"
+    "webpack": "^1.12.14"
   },
   "dependencies": {
-    "@jackalope/core": "^0.2.1",
     "classnames": "^2.2.5",
-    "forever": "^0.15.1",
     "koa": "^1.2.0",
     "koa-compress": "^1.0.9",
     "koa-router": "^5.4.0",
     "koa-static": "^2.0.0",
-    "mithril": "^1.0.0-rc.5",
-    "sanctuary": "^0.11.1"
+    "mithril": "^1.0.0-rc.5"
   }
 }
