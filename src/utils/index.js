@@ -1,2 +1,5 @@
 export * from 'utils/component'
 export * from 'utils/uuid'
+export * from 'utils/add-tag'
+export * from 'utils/create-action'
+export * from 'utils/has-tag'
