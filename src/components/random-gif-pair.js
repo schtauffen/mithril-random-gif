@@ -3,6 +3,7 @@ import stream from 'mithril/stream'
 
 import RandomGif from 'components/random-gif'
 import { component, addTag } from 'utils'
+import styles from 'components/random-gif.styl'
 
 const RandomGifPair = ({ attrs }) => {
   const { update } = attrs
@@ -19,8 +20,10 @@ const RandomGifPair = ({ attrs }) => {
 
   return vnode =>
     m('div', [
-      m(RandomGif, { update: updateGif1 }),
-      m(RandomGif, { update: updateGif2 })
+      m('div', { class: styles.half },
+        m(RandomGif, { update: updateGif1 })),
+      m('div', { class: styles.half },
+        m(RandomGif, { update: updateGif2 })),
     ])
 }
 
