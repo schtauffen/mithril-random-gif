@@ -14,7 +14,8 @@ const Root = component(vnode => {
   const toggle = update.map(hasTag('TOGGLE'))
   const active = scan(seed => !seed, false, toggle)
 
-  update.map(a => a.tags).map(console.log.bind(console))
+  toggle.map(log)
+  update.map(a => a.tags).map(log)
 
   return vnode =>
     m('div', [
