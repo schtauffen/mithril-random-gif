@@ -9,6 +9,8 @@ import RandomGifTop from 'components/random-gif-top'
 import RandomGifPair from 'components/random-gif-pair'
 import RandomGifPairPair from 'components/random-gif-pair-pair'
 
+import 'main.styl'
+
 const Root = component(vnode => {
   const update = stream()
   const toggle = update.map(hasTag('TOGGLE'))
